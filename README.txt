@@ -4,8 +4,8 @@ By M-374 LX <http://m374lx.users.sourceforge.net/>
 About
 -----
  UselOS, which stands for "useless operating system", is a small operating 
- system I decided to write just to better understand how such type of software
- works.
+ system for x86 PCs I decided to write just to better understand how such type 
+ of software works.
 
 Basic usage
 -----------
