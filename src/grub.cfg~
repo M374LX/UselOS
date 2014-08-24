@@ -1,3 +1,0 @@
-menuentry "UselOS" {
-	multiboot /boot/UselOS.bin
-}
