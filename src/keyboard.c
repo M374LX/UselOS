@@ -130,9 +130,7 @@ static const u8 set1_map[] =
 u8 keyboard_read()
 {
 	//Wait while the PS/2 output buffer is full
-	while (!(inb(PS2_STATUS_PORT) & PS2_OUTPUT_FULL))
-	{
-	}
+	while (!(inb(PS2_STATUS_PORT) & PS2_OUTPUT_FULL));
 
 	return inb(PS2_DATA_PORT);
 }
