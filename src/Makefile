@@ -1,5 +1,4 @@
 CFLAGS  := -fno-stack-protector -fno-builtin -nostdinc -O -g -I.
-LDFLAGS := -nostdlib -Wl,-N -Wl,-Ttext -Wl,100000
 
 TARGET := UselOS
 OBJS := start.o main.o ioports.o screen.o keyboard.o console.o ush.o ush_commands.o
