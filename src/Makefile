@@ -1,4 +1,4 @@
-CFLAGS  := -fno-stack-protector -fno-builtin -nostdinc -O -g -I.
+CFLAGS  := -m32 -fno-stack-protector -fno-builtin -nostdinc -O -g -I.
 
 TARGET := UselOS
 OBJS := start.o main.o ioports.o screen.o keyboard.o console.o ush.o ush_commands.o
@@ -6,13 +6,13 @@ OBJS := start.o main.o ioports.o screen.o keyboard.o console.o ush.o ush_command
 all:	$(TARGET).bin
 
 $(TARGET).bin: $(OBJS)
-	ld -T linker.ld -o $@ $(OBJS)
+	ld -m elf_i386 -T linker.ld -o $@ $(OBJS)
 
 %.o: %.c
 	gcc $(CFLAGS) -c $< -o $@
 
 %.o: %.s
-	as $< -o $@
+	as --32 $< -o $@
 
 iso:
 	mkdir -p iso/boot/grub
