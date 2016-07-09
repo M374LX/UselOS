@@ -16,9 +16,7 @@ $(TARGET).bin: $(OBJS)
 	as $< -o $@
 
 iso:
-	mkdir iso/
-	mkdir iso/boot/
-	mkdir iso/boot/grub
+	mkdir -p iso/boot/grub
 	cp $(TARGET).bin iso/boot/
 	cp grub.cfg iso/boot/grub
 	grub-mkrescue -o $(TARGET).iso iso
